@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Собрать ланч - Food Construct</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Food Construct</h1>
+      <nav>
+        <a href="#">О нас</a>
+        <a href="index.html" class="active">Собрать ланч</a>
+        <a href="order.html">Оформить заказ</a>
+        <a href="#">Контакты</a>
+      </nav>
+    </header>
+
+    <section class="combo-info">
+      <h2>Доступные для заказа комбо</h2>
+      <div class="combo-grid">
+        <div class="combo-option">
+          <div class="combo-item"><span class="combo-icon">🍜</span><span>Суп</span></div>
+          <div class="combo-item"><span class="combo-icon">🥘</span><span>Главное</span></div>
+          <div class="combo-item"><span class="combo-icon">🥗</span><span>Салат</span></div>
+          <div class="combo-item"><span class="combo-icon">🥤</span><span>Напиток</span></div>
+        </div>
+        <div class="combo-option">
+          <div class="combo-item"><span class="combo-icon">🍜</span><span>Суп</span></div>
+          <div class="combo-item"><span class="combo-icon">🥘</span><span>Главное</span></div>
+          <div class="combo-item"><span class="combo-icon">🥤</span><span>Напиток</span></div>
+        </div>
+        <div class="combo-option">
+          <div class="combo-item"><span class="combo-icon">🍜</span><span>Суп</span></div>
+          <div class="combo-item"><span class="combo-icon">🥗</span><span>Салат</span></div>
+          <div class="combo-item"><span class="combo-icon">🥤</span><span>Напиток</span></div>
+        </div>
+        <div class="combo-option">
+          <div class="combo-item"><span class="combo-icon">🥘</span><span>Главное</span></div>
+          <div class="combo-item"><span class="combo-icon">🥗</span><span>Салат</span></div>
+          <div class="combo-item"><span class="combo-icon">🥤</span><span>Напиток</span></div>
+        </div>
+        <div class="combo-option">
+          <div class="combo-item"><span class="combo-icon">🥘</span><span>Главное</span></div>
+          <div class="combo-item"><span class="combo-icon">🥤</span><span>Напиток</span></div>
+        </div>
+      </div>
+
+      <div class="dessert-info">
+        <div class="combo-item">
+            <span class="combo-icon">🍰</span>
+            <span>Десерт</span>
+            <small>(Можно добавить к любому заказу)</small>
+        </div>
+      </div>
+    </section>
+
+    <h2>Выберите блюда</h2>
+
+    <div id="nav">
+      <button data-cat="main" class="active">Главные блюда</button>
+      <button data-cat="soup">Супы</button>
+      <button data-cat="starter">Стартеры / Салаты</button>
+      <button data-cat="drink">Напитки</button>
+      <button data-cat="dessert">Десерты</button>
+    </div>
+
+    <div id="menu"></div>
+
+    <div class="sticky-footer hidden" id="sticky-footer">
+        <div class="footer-content">
+            <div class="price-info">Итого: <span id="total-price">0</span> ₽</div>
+            <a href="order.html" id="order-link" class="btn-order disabled">Перейти к оформлению</a>
+        </div>
+    </div>
+
+    <script src="./script/main.js"></script>
+  </body>
+</html>

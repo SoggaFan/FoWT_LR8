@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформление заказа - Food Construct</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Food Construct</h1>
+        <nav>
+            <a href="#">О нас</a>
+            <a href="index.html">Собрать ланч</a>
+            <a href="order.html" class="active">Оформить заказ</a>
+            <a href="#">Контакты</a>
+        </nav>
+    </header>
+
+    <main class="order-container">
+        <h2>Состав заказа</h2>
+        <div id="order-items-grid" class="cards-row">
+            </div>
+        <div id="empty-message" class="hidden" style="text-align:center; padding: 20px;">
+            Ничего не выбрано. Чтобы добавить блюда в заказ, перейдите на страницу <a href="index.html">Собрать ланч</a>.
+        </div>
+
+        <h2 id="order-form-title">Оформление заказа</h2>
+        <form id="order-form" class="order-form-grid">
+            <fieldset class="order-summary">
+                <legend>Ваш заказ</legend>
+                <div class="summary-row"><span>Суп</span><span id="summary-soup">Не выбрано</span></div>
+                <div class="summary-row"><span>Главное блюдо</span><span id="summary-main">Не выбрано</span></div>
+                <div class="summary-row"><span>Салат/стартер</span><span id="summary-salad">Не выбрано</span></div>
+                <div class="summary-row"><span>Напиток</span><span id="summary-drink">Не выбрано</span></div>
+                <div class="summary-row"><span>Десерт</span><span id="summary-dessert">Не выбрано</span></div>
+                <div class="summary-total"><span>Стоимость заказа</span><span id="summary-total-price">0₽</span></div>
+                
+                <label for="comment">Комментарии к заказу</label>
+                <textarea name="comment" id="comment" rows="4"></textarea>
+            </fieldset>
+
+            <fieldset class="client-data">
+                <legend>Ваши данные</legend>
+                <label for="full_name">Имя</label>
+                <input type="text" name="full_name" id="full_name" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+
+                <div class="checkbox-row">
+                    <input type="checkbox" name="subscribe" id="subscribe">
+                    <label for="subscribe">Получать информацию о скидках и акциях</label>
+                </div>
+
+                <label for="phone">Номер телефона</label>
+                <input type="tel" name="phone" id="phone" required>
+
+                <label for="delivery_address">Адрес доставки</label>
+                <input type="text" name="delivery_address" id="delivery_address" required>
+
+                <div style="margin-top: 15px;">
+                    <label>Время доставки:</label>
+                    <div style="margin: 5px 0;">
+                        <input type="radio" name="delivery_type" value="now" id="time-now" checked>
+                        <label for="time-now" style="display:inline;">Как можно скорее</label>
+                    </div>
+                    <div style="margin: 5px 0;">
+                        <input type="radio" name="delivery_type" value="by_time" id="time-later">
+                        <label for="time-later" style="display:inline;">К указанному времени</label>
+                    </div>
+                    <div id="time-input-container" class="hidden">
+                        <label for="delivery_time">Время</label>
+                        <input type="time" name="delivery_time" id="delivery_time" min="07:00" max="23:00" step="300">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn-submit" style="background:transparent; border-color:#ccc;">Сбросить</button>
+                    <button type="submit" class="btn-submit">Отправить</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <div id="notification" class="notification hidden">
+        <p id="notification-text"></p>
+        <button id="notification-close" class="btn-submit">Окей</button>
+    </div>
+
+    <script src="./script/order-scripts.js"></script>
+</body>
+</html>
