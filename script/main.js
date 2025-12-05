@@ -39,7 +39,7 @@ function createCard(dish) {
         <img src="${dish.image}" alt="${dish.name}">
         <div class="price">${dish.price} ₽</div>
         <div class="name">${dish.name}</div>
-        <div class="weight">${dish.weight}</div>
+        <div class="weight">${dish.count}</div>
         <button type="button" class="${isSelected ? 'added' : ''}">
             ${isSelected ? 'Добавлено' : 'Добавить'}
         </button>`;
